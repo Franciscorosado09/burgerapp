@@ -1,0 +1,19 @@
+{
+  "name": "burgerapp",
+  "version": "1.0.0",
+  "description": "This is application for making burgers\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franciscorosado09/burgerapp.git"
+  },
+  "author": "Francisco Rosado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franciscorosado09/burgerapp/issues"
+  },
+  "homepage": "https://github.com/Franciscorosado09/burgerapp#readme"
+}
