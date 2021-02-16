@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const changeBurgerBtns = document.querySelectorAll('.devour');
 
   // Set up the event listener for the create button
-  if (changeSleepBtns) {
-    changeSleepBtns.forEach((button) => {
+  if (changeBurgerBtns) {
+    changeBurgerBtns.forEach((button) => {
       button.addEventListener('click', (e) => {
         // Grabs the id of the element that goes by the name, "id"
         const id = e.target.getAttribute('data-id');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           devoured: devoured,
         };
 
-        fetch(`/api/burgers/${id}`, {
+        fetch(`/api/burger/${id}`, {
           method: 'PUT',
           headers: {
             Accept: 'application/json',
@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // CREATE
-  const createCatBtn = document.getElementById('create-form');
+  const createBurgerBtn = document.getElementById('create-form');
 
-  if (createCatBtn) {
-    createCatBtn.addEventListener('submit', (e) => {
+  if (createBurgerBtn) {
+    createBurgerBtn.addEventListener('submit', (e) => {
       e.preventDefault();
 
       // Grabs the value of the textarea that goes by the name, "quote"
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       };
 
       // Send POST request to create a new quote
-      fetch('/api/burgers', {
+      fetch('/api/burger', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const id = e.target.getAttribute('data-id');
 
       // Send the delete request
-      fetch(`/api/burgers/${id}`, {
+      fetch(`/api/burger/${id}`, {
         method: 'DELETE',
       }).then((res) => {
         console.log(res);
