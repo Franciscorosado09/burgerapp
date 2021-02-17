@@ -6,7 +6,7 @@ const burger = require ('../models/burger.js');
 
 
 router.get('/', (req, res) => {
-    burger.all((data) => {
+    burger.selectAll((data) => {
         const hbsObject = {
             burger: data,
         }
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.post('/api/burger', (req, res) => {
     console.log(req.body.burger_name)
 
-    burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
+    burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, false], (result) => {
 
         // res.json({id:result.insertId})
         console.log(result);
@@ -36,7 +36,7 @@ router.put('/api/burger/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
     console.log('condition', condition);
 
-    burger.update(
+    burger.updateOne(
         {
             devoured: req.body.devoured
         },
