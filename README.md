@@ -34,9 +34,9 @@ In this assignment, you'll create a burger logger with MySQL, Node, Express, Han
 
 link to github: https://github.com/Franciscorosado09/burgerapp
 
-Link to heroku: 
+Link to heroku: https://yumyumburgerapp.herokuapp.com/
 
-Portfolio: 
+Portfolio: https://franciscorosado09.github.io/PortfolioFRosado/
 
 
 
